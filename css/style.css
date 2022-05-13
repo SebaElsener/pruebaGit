@@ -1,0 +1,653 @@
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgb(202, 238, 247), rgba(255, 255, 0, 0.151));
+}
+
+/* propiedades-estilos header */
+header{
+    background: url(../img/imgpuente.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 7rem;
+}
+
+.imagenLogo{
+    transform: scale(.5);
+    width: 50%;
+}
+
+header nav{
+    width: 50%;
+}
+
+header nav ul li{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: x-small;
+    list-style: none;
+}
+
+header nav ul li a{
+    color: rgb(255, 255, 255);
+    text-shadow: .25rem .25rem .2rem rgba(8, 8, 8, 0.767);
+    text-decoration: none;
+}
+
+/* animacion texto header */
+header nav ul li a{
+    animation-duration: 2s;
+    animation-name: aparecer;
+   }
+
+@keyframes aparecer{
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
+
+/* propiedades-estilos main index mobile first 360x740px 600px */
+.noticiaCinco, .noticiaSeis, .masNoticias{
+    display: none;
+}
+
+.tituloPrincipal{
+    color: rgb(20, 182, 160);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    text-shadow: .1rem .1rem .2rem rgba(128, 128, 128, 0.767);
+}
+
+.grillaPpal{
+    display: grid;
+    grid-template-areas:
+        "tituloPrincipal tituloPrincipal"
+        "noticiaUno noticiaDos"
+        "noticiaTres noticiaCuatro"
+        "formularioTrivia formularioTrivia"
+        "edicAnteriores iconosRedes";
+    justify-content: space-around;
+    text-align: center;
+}
+
+.tituloPrincipal{
+    grid-area: tituloPrincipal;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+.noticiaUno{
+    grid-area: noticiaUno;
+}
+
+.noticiaDos{
+    grid-area: noticiaDos;
+}
+
+.noticiaTres{
+    margin-top: .5rem;
+    grid-area: noticiaTres;
+}
+
+.noticiaCuatro{
+    margin-top: .5rem;
+    grid-area: noticiaCuatro;
+}
+
+.formularioTrivia{
+    padding: 5%;
+    grid-area: formularioTrivia;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .8rem;
+}
+
+.edicAnteriores{
+    background-color: azure;
+    grid-area: edicAnteriores;
+    margin-top: 1rem;
+    border-radius: 15px;
+}
+
+.edicionesAnteriores{
+    gap: .3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.iconosRedes{
+    background-color: rgb(255, 255, 255);
+    grid-area: iconosRedes;
+    margin-top: 1rem;
+    margin-left: .5rem;
+    text-align: center;
+    border: dotted 1px darkcyan;
+    border-radius: 15px;
+}
+
+.edicion1, .edicion2{
+    border: 1px solid rgb(216, 214, 214);
+}
+
+.tituloNoticia, .tituloNoticiaSecciones{
+    text-decoration: none;
+    font-size: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.671);
+}
+
+.tituloAside{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: .5rem;
+    color: cadetblue;
+    font-size: medium;
+    text-align: center;
+}
+
+/* propiedades-estilos footer */
+footer{
+    margin-top: 3%;
+    display: flex;
+    padding: .5rem;
+    background-color: rgba(100, 148, 237, 0.925);
+    border-radius: 5px;
+    justify-content: space-around;
+    gap: 30%;
+}
+
+footer nav ul li{
+    list-style: none;
+}
+
+footer nav ul li a{
+    color: rgba(255, 255, 255, 0.904);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* estilos formulario html contacto 360px */
+.formularioContacto{
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    padding: 5%;
+    background-color: rgb(224, 240, 253);
+    width: 20rem;
+    height: 16rem;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.473);
+    text-align: center;
+    justify-items: center;
+}
+
+.mainContacto{
+    height: 72vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.tituloFormulario{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 102, 0, 0.815);
+    margin-bottom: 1rem;
+}
+
+.formularioContacto label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.493);
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.botonFormularioContacto{
+    margin-top: 1rem;
+    width: 5rem;
+    height: 2.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 15px;
+    font-size: .8rem;
+    border: 0;
+    background-color:  rgb(193, 227, 255);
+    color: rgba(0, 0, 0, 0.603);
+    font-weight: bold;
+}
+
+.botonFormularioContacto:hover{
+    background-color: rgba(255, 102, 0, 0.815);
+    transition: background-color .7s;
+}
+
+.campoNombreAp, .campoEmail{
+    border-radius: 5px;
+    width: auto;
+    height: 1.2rem;
+    border: 0;
+}
+
+.campoNombreAp:focus, .campoEmail:focus{
+    background-color: rgba(255, 102, 0, 0.075);
+    transition: background-color .7s;
+}
+
+/* propiedades-estilos para noticias de los html de las secciones deportivas */
+.tituloSecundario{
+    grid-area: tituloSecundario;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: coral;
+    margin-bottom: 5%;
+}
+
+.tituloNoticiaSecciones{
+    margin-top: 5%;
+}
+
+.cajaNoticia{
+    display: grid;
+    grid-template-areas:
+        "tituloSecundario"
+        "fotoNoticia"
+        "tituloNoticiaSecciones"
+        "textoNoticia";
+    text-align: center;
+    justify-items: center;
+    padding: 7%;
+}
+
+.fotoNoticia{
+    width: 60%;
+    height: auto;
+}
+
+.textoNoticia{
+    margin-top: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+
+.mainNoticiashtml{
+    height: 36rem;
+}
+
+/* estilos html acerca de */
+.mainAcercaDe{
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cajaAcercaDe{
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    width: 340px;
+    height: 230px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.animate__animated{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 10px gray;
+    font-size: 2rem;
+}
+
+.derechosAcercaDe{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.692);
+}
+
+.mailAcercaDe{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 128, 43);
+    font-size: 1rem;
+}
+
+.inicioAcercaDe{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    color: black;
+}
+
+.inicioAcercaDe:hover{
+    text-shadow: 0px 0px 20px rgb(55, 74, 250);
+    transition: text-shadow .5s;
+}
+
+.disenoWeb{
+    font-size: 1.4rem;
+}
+
+/* media queries */
+
+/* query tablet 800px hasta 1024px /*
+/* */
+@media screen and (min-width: 800px) { 
+    /* estilos header index y demás html */
+    header{
+        height: 10rem;
+    }
+
+    header nav ul{
+        display: inline-block;
+        text-align: right;
+    }
+
+    header nav ul li{
+        font-size: .9rem;
+    }
+
+    .imagenLogo{
+        transform: scale(.8);
+    }
+
+    .tituloPrincipal{
+        font-size: 2rem;
+        text-shadow: .2rem .2rem .3rem rgba(128, 128, 128, 0.767);
+    }
+
+    .cajaIframe{
+        width: 70%;
+        height: auto;
+    }
+
+    .noticiaCinco, .noticiaSeis{
+        display: block;
+        margin-top: .5rem;
+    }
+
+    .grillaPpal{
+        grid-template-areas:
+            "tituloPrincipal tituloPrincipal"
+            "noticiaUno noticiaDos"
+            "noticiaTres noticiaCuatro"
+            "noticiaCinco noticiaSeis"
+            "formularioTrivia formularioTrivia"
+            "edicAnteriores iconosRedes";
+        gap: .5rem;
+        padding: 1%;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .noticiaCinco{
+        margin-top: .5rem;
+    }
+
+    .noticiaSeis{
+        margin-top: .5rem;
+    }
+
+    .tituloNoticia{
+        font-size: 1.3rem;
+    }
+
+    .formularioTrivia form fieldset div label{
+        font-size: 1.2rem;
+    }
+
+    .formularioTrivia form{
+        font-size: 1.3rem;
+    }
+
+    .tituloAside{
+        color: cadetblue;
+        font-size: larger;
+        text-align: center;
+    }
+
+    footer nav ul li a{
+        font-size: .9rem;
+    }
+
+    /* estilos secciones deportivas demás html */
+    .tituloSecundario{
+        font-size: 1.8rem;
+        margin-bottom: 1%;
+    }
+
+    .tituloNoticiaSecciones{
+        font-size: 1.5rem;
+    }
+
+    .textoNoticia{
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .mainNoticiashtml{
+        height: 50rem;
+    }
+
+    /* formulario contacto 800px */
+    .formularioContacto{
+        padding: 5%;
+        width: 40rem;
+        height: 32rem;
+        border-radius: 40px;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .tituloFormulario{
+        font-size: 2.4rem;
+    }
+
+    .formularioContacto label{
+        font-size: 1.6rem;
+    }
+
+    .botonFormularioContacto{
+        margin-top: 1rem;
+        width: 10rem;
+        height: 5rem;
+        border-radius: 20px;
+        font-size: 1.4rem;
+    }
+
+    .campoNombreAp, .campoEmail{
+        border-radius: 7px;
+        width: 80%;
+        height: 2rem;
+    }
+}
+
+/* query desktop más de 1024px */
+@media screen and (min-width: 1024px) {
+    /* estilos header index y demás html */
+    header{
+        height: 16rem;
+    }
+
+    header nav{
+        width: 90%;
+    }
+
+    header nav ul{
+        margin-right: 2rem;
+        justify-content: space-around;
+        display: flex;
+    }
+
+    header nav ul li{
+        font-size: 1.2rem;
+    }
+
+    .imagenLogo{
+        width: 35%;
+        transform: scale(1);
+    }
+
+    .tituloPrincipal{
+        font-size: 2.3rem;
+        text-shadow: .2rem .2rem .3rem rgba(128, 128, 128, 0.767);
+    }
+
+    .grillaPpal{
+        height: 42rem;
+        grid-template-areas:
+            "tituloPrincipal tituloPrincipal tituloPrincipal iconosRedes"
+            "noticiaUno noticiaDos noticiaTres formularioTrivia"
+            "noticiaCuatro noticiaCinco noticiaSeis edicAnteriores";
+        gap: .5rem;
+        padding: 1%;
+        grid-template-rows: .5fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-around;
+        text-align: left;
+        align-items: center;
+    }
+
+    .noticiaCinco{
+        display: block;
+        margin-top: .5rem;
+        grid-area: noticiaCinco;
+    }
+
+    .noticiaSeis{
+        display: block;
+        margin-top: .5rem;
+        grid-area: noticiaSeis;
+    }
+
+    .noticiaTres, .noticiaCuatro, .noticiaCinco, .noticiaSeis{
+        margin-top: 0%;
+    }
+
+    .tituloNoticia{
+        font-size: 1.3rem;
+    }
+
+    .tituloAside{
+        margin: 0%;
+    }
+
+    .iconosRedes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.5rem;
+        width: auto;
+        margin: 0%;
+    }
+
+    .iconos{
+        transform: scale(.6);
+    }
+
+    .cajaIframe{
+        width: 80%;
+        height: auto;
+    }
+
+    .edicAnteriores{
+        margin: 0%;
+        height: auto;
+        padding: 12%;
+    }
+
+    .edicionesAnteriores{
+        gap: 20%;
+    }
+
+    .edicion1, .edicion2{
+        margin-top: 10%;
+    }
+
+    .formularioTrivia{
+        padding-top: 0%;
+        height: 100%;
+    }
+
+    .formularioTrivia form fieldset div label{
+        font-size: 1rem;
+    }
+
+    .formularioTrivia form{
+        background-color: rgba(255, 255, 255, 0.979);
+        font-size: 130%;
+        padding: 10%;
+    }
+
+    .tituloAside{
+        color: cadetblue;
+        font-size: larger;
+        text-align: center;
+    }
+
+    footer{
+        padding: 2rem;
+        margin-top: 0%;
+        align-items: center;
+    }
+
+    footer nav ul li a{
+        font-size: 1.2rem;
+    }
+
+    /* estilos secciones deportivas de los demás html */
+    .iconosRedesNoticias{
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: dotted 1px darkcyan;
+        border-radius: 15px;
+        margin: 0%;
+    }
+
+    .tituloSecundario{
+        margin: 0%;
+        font-size: 2.2rem;
+    }
+
+    .tituloNoticiaSecciones{
+        margin: 0%;
+        font-size: 1.5rem;
+    }
+
+    .textoNoticia{
+        font-size: 1.2rem;
+    }
+
+    .mainNoticiashtml{
+        height: auto;
+    }
+
+    /* formulario contacto 1024px */
+    .formularioContacto{
+        width: 45rem;
+        height: 90%;
+    }
+
+    .campoNombreAp, .campoEmail{
+        width: 100%;
+    }
+
+    .mainContacto{
+        height: 62vh;
+    }
+}
+
